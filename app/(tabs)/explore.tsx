@@ -1,30 +1,23 @@
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useState } from 'react';
-import { StyleSheet, Text, SafeAreaView } from 'react-native';
-import Leaderboard from 'react-native-leaderboard';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useEffect, useState } from "react";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
+import Leaderboard from "react-native-leaderboard";
 
 let getData = async (setData: any) => {
-  let leaderboardData = await AsyncStorage.getItem('leaderBoard');
+  let leaderboardData = await AsyncStorage.getItem("leaderBoard");
   setData(JSON.parse(leaderboardData as any));
 };
-
 
 export default function TabTwoScreen() {
   const [data, setData] = useState([]);
   useEffect(() => {
     getData(setData);
-  }, [setData])
+  }, [setData]);
 
   return (
     <SafeAreaView>
       <Text style={styles.HeadLeaderboard}>LeaderBoard 📊</Text>
-      <Leaderboard 
-        data={[
-          ...data
-        ]}
-        sortBy='score' 
-        labelBy='name'
-      />
+      <Leaderboard data={data ? [...data] : []} sortBy="score" labelBy="name" />
     </SafeAreaView>
   );
 }
@@ -32,7 +25,7 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   HeadLeaderboard: {
     fontSize: 25,
-    textAlign: 'center',
+    textAlign: "center",
     padding: 20,
   },
 });

@@ -39,14 +39,14 @@ export default function QuizContextWrapper(props: IQuizContextWrapper) {
         }
         setPoint((point) => point + 1);
         setStepIndex((step) => step + 1);
-      }, 2000);
+      }, 1000);
 
       return "pass";
     }
 
     setTimeout(() => {
       setStepIndex((step) => step + 1);
-    }, 2000)
+    }, 1000)
     
     return "error";
   };
@@ -74,7 +74,10 @@ export default function QuizContextWrapper(props: IQuizContextWrapper) {
         console.log("error saving");
       });
     };
+    console.log('not finished =>', stepIndex + 1, randomQuiz.length)
+
     if (stepIndex + 1 === randomQuiz.length) {
+      console.log('finished =>', stepIndex + 1, randomQuiz.length)
       finished()
     }
   }, [stepIndex]);

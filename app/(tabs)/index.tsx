@@ -10,7 +10,7 @@ import Start from "@/components/quiz/Start";
 import Stepper from "@/components/quiz/Stepper";
 import useQuizContext from "@/context/useQuizContext";
 import { useEffect, useState } from "react";
-import { useNavigation } from "expo-router";
+import { useNavigation, useRouter } from "expo-router";
 
 interface AnswerState {
   answer: string;
@@ -19,14 +19,10 @@ interface AnswerState {
 
 export default function HomeScreen() {
   const context = useQuizContext();
-  const navigation = useNavigation()
+  const router = useRouter();
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<number, AnswerState>
   >({});
-
-  // useEffect(() => {
-  //   context.step.setStepIndex(0)
-  // },[context.step])
 
   const handleAnswerPress = (
     questionIndex: number,

@@ -21,7 +21,8 @@ export default function TabLayout() {
           const result = parts[0];
 
           if (result === 'index') {
-            router.replace('/')
+            e.preventDefault();
+            router.push('/');
           }
         }
       }}
