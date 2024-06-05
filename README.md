@@ -1,4 +1,4 @@
-# React Native Quiz App Simple
+![CleanShot 2567-06-05 at 21 17 30](https://github.com/topspinppy/simple-quiz-app-react-native/assets/18381211/0490f747-9b9d-473f-8539-8f3e384b8846)X# React Native Quiz App Simple
 
 This is a simple quiz app built with React Native, managed with Expo, and run by Bun.js.
 
@@ -8,7 +8,11 @@ Before you begin, ensure you have met the following requirements:
 
 - [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
 - [Bun.js](https://bun.sh/)
-- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- [Expo CLI](https://do
+
+https://github.com/topspinppy/simple-quiz-app-react-native/assets/18381211/81653edb-ea03-4492-a393-b6f1033ffb87
+
+cs.expo.dev/get-started/installation/)
 
 ## Installation
 
